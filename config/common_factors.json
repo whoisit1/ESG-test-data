@@ -1,0 +1,12 @@
+{
+  "department": ["Sales & Marketing", "HR", "Production", "Engineering", "Packing", "Logistics", "Stores", "Customer Service", "R&D", "Procurement"],
+  "dept_wtg":   [ 16,                 3,     32,           22,            4,         6,           2,        9,                  2,     4           ],
+  "emp_type":  ["Full Time Employee", "Fixed Term Contractual Employee", "Casual Employee", "Temporary Employee", "Contractual Worker", "Wage Boarder"],
+  "emp_type_wtg": [89,                 3,                                 3,                 4,                    0,                    1            ],
+  "emp_gender":     ["Male", "Female", "Third gender"],
+  "emp_gender_wtg": [ 54,     45,       1            ],
+  "marital_status": ["Single", "Married", "Divorced", "Separated", "Widowed"],
+  "band":     ["N1:30650", "N2:32750", "M1:35450", "M2:43200", "M3:53050", "M4:61550", "M5:76550", "M6:95350", "M7:106450", "EC:128100"],
+  "band_wtg": [ 2,          5,          22,         24,         16,         14,         8,          5,          3,           1         ],
+  "reason_for_separation": ["Career change", "AWOL", "Performance", "Medical issues", "Return to school", "Relocation", "Gross misconduct"] 
+}

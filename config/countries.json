@@ -1,0 +1,85 @@
+{
+    "countries": [
+	{
+	    "country": "India",
+	    "location": ["Delhi", "Bangalore", "Vizag", "Hyderabad", "Chennai"],
+	    "cost_centre": ["IN1", "IN2", "IN3", "IN4"],
+	    "religion": ["Hinduism", "Christianity", "Islam", "Sikhism", "Buddhism", "Jainism"],
+	    "ethnicities": ["Indo-Aryan", "Dravidian", "Iranic"],
+	    "ethn_wtg":    [65,           33,          2       ],
+	    "minorities": ["Sikh", "Jain", "Muslim"]
+	},
+	{
+	    "country": "United States",
+	    "location": ["Boston", "New York", "Phoenix", "Boise"],
+	    "cost_centre": ["US1", "US2", "US3", "US4", "US5", "US6"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Athiest"],
+	    "ethnicities": ["White", "Amerindian", "African-American", "Native-Hawaiian"],
+	    "ethn_wtg":    [75,       8,            15,                 2               ],
+	    "minorities": ["Pacific Islander", "Alaska-Native"]
+	},
+	{
+	    "country": "United Kingdom",
+	    "location": ["London", "Warwick", "Portsmouth", "Jersey", "York"],
+	    "cost_centre": ["UK1", "UK2", "UK3", "UK4", "UK5"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Hindu"],
+	    "ethnicities": ["White", "Black British", "Asian British"],
+	    "ethn_wtg":    [77,       13,            10               ],
+	    "minorities": ["Indian Briitsh", "Pakistani British", "Caribbean British"]
+	},
+	{
+	    "country": "Italy",
+	    "location": ["Rome", "Nice", "Naples", "Florence"],
+	    "cost_centre": ["IT1", "IT2", "IT3"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Athiest"],
+	    "ethnicities": ["Italian", "Slovene-Italian", "Greek-Italian"],
+	    "ethn_wtg":    [92,       5,            3               ],
+	    "minorities": ["Slovene-Italian", "Greek-Italian", "Albanian-Italian"] 
+	},
+	{
+	    "country": "Denmark",
+	    "location": ["Copenhagen", "Esbjerg", "Aalborg"],
+	    "cost_centre": ["DM1", "DM2", "DM3"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Athiest"],
+	    "ethnicities": ["Danish", "Turkish", "Polish"],
+	    "ethn_wtg":    [ 80,        12,          8               ],
+	    "minorities": ["Turkish", "Syrian", "Romanian"]
+	},
+	{
+	    "country": "China",
+	    "location": ["Beijing", "Peking", "Shanghai", "Guangzhou", "Chengdu", "Chongqing"],
+	    "cost_centre": ["CN1", "CN2", "CN3", "CN4", "CN5", "CN6"],
+	    "religion": ["Buddhism", "Taoism", "Christianity", "Islam", "Athiest"],
+	    "ethnicities": ["Han Chinese", "Zhang", "Hui"],
+	    "ethn_wtg":    [ 93,             4,       3               ],
+	    "minorities": ["Manchu", "Uighur", "Mongol"]
+	},
+	{
+	    "country": "Netherlands",
+	    "location": ["Amsterdam", "Eindhoven", "Rotterdam"],
+	    "cost_centre": ["NL1", "NL2", "NL3", "NL4"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Athiest"],
+	    "ethnicities": ["Dutch", "EU(excluding Dutch)", "Turkish"],
+	    "ethn_wtg":    [ 88,       8,            4               ],
+	    "minorities": ["Moroccan", "Surinamese"] 
+	},
+	{
+	    "country": "Indonesia",
+	    "location": ["Jakarta", "Bandung", "Surabaya"],
+	    "cost_centre": ["IA1", "IA2", "IA3"],
+	    "religion": ["Christianity", "Islam", "Hinduism"],
+	    "ethnicities": ["Javanese", "Sundanese", "Malay"],
+	    "ethn_wtg":    [79,          13,          8     ],
+	    "minorities": ["Batak", "Bantenese", "Dayak"]    
+	},
+	{
+	    "country": "Belgium",
+	    "location": ["Brussels", "Antwerp", "Ghent"],
+	    "cost_centre": ["BL1", "BL2", "BL3"],
+	    "religion": ["Christianity", "Islam", "Jewish", "Athiest"],
+	    "ethnicities": ["Belgian", "Moroccan", "Dutch"],
+	    "ethn_wtg":    [76,         17,         7     ],
+	    "minorities": ["French", "Turkish", "Dutch"]
+	}
+]
+}

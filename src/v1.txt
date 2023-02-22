@@ -1,0 +1,225 @@
+extern crate rand;
+extern crate test_data_generation;
+
+// use rand::distributions::{IndependentSample, Range};
+use rand::distributions::WeightedIndex;
+use rand::prelude::*;
+use random_string::generate;
+use std::collections::HashMap;
+use std::hash::Hash;
+use test_data_generation::data_sample_parser::DataSampleParser;
+use test_data_generation::Profile;
+// use test_data_generation::profile::profile::Profile;
+
+// fn rand_hash<K: Eq + Hash, V>(hash: &HashMap<K, V>) -> Option<&V> {
+//     if hash.is_empty() {
+//         return None;
+//     }
+//     let index = Range::new(0, hash.len()).ind_sample(&mut rand::thread_rng());
+//     hash.values().skip(index).next()
+// }
+
+fn main() {
+    //#[derive(Copy, Clone)]
+    struct HValue {
+        currency: String,
+        location: Vec<String>,
+        department: Vec<String>,
+        cost_centre: Vec<String>,
+        religion: Vec<String>,
+    }
+
+    let india = HValue {
+        currency: "INR".to_string(),
+        location: vec![
+            "Delhi".to_string(),
+            "Bangalore".to_string(),
+            "Vizag".to_string(),
+            "Hyderabad".to_string(),
+            "Chennai".to_string(),
+        ],
+        department: vec![
+            "Marketing".to_string(),
+            "Sales".to_string(),
+            "HR".to_string(),
+            "Production".to_string(),
+            "Engineering".to_string(),
+            "Packing".to_string(),
+            "Logistics".to_string(),
+            "Stores".to_string(),
+            "Customer Service".to_string(),
+            "R&D".to_string(),
+            "Procurement".to_string(),
+        ],
+        cost_centre: vec![
+            "IN1".to_string(),
+            "IN2".to_string(),
+            "IN3".to_string(),
+            "IN4".to_string(),
+        ],
+        religion: vec![
+            "Hinduism".to_string(),
+            "Christianity".to_string(),
+            "Islam".to_string(),
+            "Sikhism".to_string(),
+            "Buddhism".to_string(),
+            "Jainism".to_string(),
+        ],
+    };
+
+    let us = HValue {
+        currency: "USD".to_string(),
+        location: vec![
+            "Boston".to_string(),
+            "New York".to_string(),
+            "Phoenix".to_string(),
+            "Boise".to_string(),
+        ],
+        department: vec![
+            "Marketing".to_string(),
+            "Sales".to_string(),
+            "HR".to_string(),
+            "Production".to_string(),
+            "Engineering".to_string(),
+            "Packing".to_string(),
+            "Logistics".to_string(),
+            "Stores".to_string(),
+            "Customer Service".to_string(),
+            "R&D".to_string(),
+            "Procurement".to_string(),
+        ],
+        cost_centre: vec![
+            "US1".to_string(),
+            "US2".to_string(),
+            "US3".to_string(),
+            "US4".to_string(),
+            "US5".to_string(),
+            "US6".to_string(),
+        ],
+        religion: vec![
+            "Christianity".to_string(),
+            "Islam".to_string(),
+            "Jewish".to_string(),
+            "Athiest".to_string(),
+        ],
+    };
+
+    let germany = HValue {
+        currency: "EUR".to_string(),
+        location: vec![
+            "Frankfurt".to_string(),
+            "Bonn".to_string(),
+            "Berlin".to_string(),
+        ],
+        department: vec![
+            "Marketing".to_string(),
+            "Sales".to_string(),
+            "HR".to_string(),
+            "Production".to_string(),
+            "Engineering".to_string(),
+            "Packing".to_string(),
+            "Logistics".to_string(),
+            "Stores".to_string(),
+            "Customer Service".to_string(),
+            "R&D".to_string(),
+            "Procurement".to_string(),
+        ],
+        cost_centre: vec!["GER1".to_string(), "GER2".to_string()],
+        religion: vec!["Christianity".to_string(), "Islam".to_string()],
+    };
+
+    let mut country_details = HashMap::new();
+
+    country_details.insert("India".to_string(), india);
+    country_details.insert("US".to_string(), us);
+    country_details.insert("Germany".to_string(), germany);
+
+    #[derive(Debug)]
+    struct Employee {
+        empid: String,
+        empname: String,
+        department: String,
+        location: String,
+        country: String,
+        currency: String,
+        cost_centre: String,
+        religion: String,
+    }
+
+    let charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    let onlychars = "ABCDEFGHIJKLMNOPRSTUV";
+    let country_list = vec!["India", "US", "Germany"];
+    let mut dsp = DataSampleParser::new();
+    // let mut data_profile = Profile::new();
+    // data_profile.analyze("Smith, John");
+    // data_profile.analyze("Doe, John");
+    // data_profile.analyze("Dale, Danny");
+    // data_profile.analyze("Rickets, Ronney");
+    // data_profile.pre_generate();
+    dsp.analyze_csv_file(
+        &String::from("/Users/rvedula/Rust/playground/test-data-gen/names-for-test-data-gen.csv"),
+        None,
+    )
+    .unwrap();
+
+    for i in 0..100 {
+        let empid = generate(8, charset);
+        // let empname = format!("{}, {}", generate(8, onlychars), generate(5, onlychars));
+        let empname = dsp.generate_record()[0].to_string();
+        //let empname = data_profile.generate();
+
+        let country = country_list
+            .choose(&mut rand::thread_rng())
+            .copied()
+            .unwrap_or_default()
+            .to_string();
+
+        let currency = country_details.get(&country).unwrap().currency.to_string();
+
+        let location = country_details
+            .get(&country)
+            .unwrap()
+            .location
+            .choose(&mut rand::thread_rng())
+            .unwrap()
+            .to_string();
+
+        let department = country_details
+            .get(&country)
+            .unwrap()
+            .department
+            .choose(&mut rand::thread_rng())
+            .unwrap()
+            .to_string();
+
+        let cost_centre = country_details
+            .get(&country)
+            .unwrap()
+            .cost_centre
+            .choose(&mut rand::thread_rng())
+            .unwrap()
+            .to_string();
+
+        let religion = country_details
+            .get(&country)
+            .unwrap()
+            .religion
+            .choose(&mut rand::thread_rng())
+            .unwrap()
+            .to_string();
+
+        let emp = Employee {
+            empid,
+            empname,
+            department,
+            location,
+            country,
+            currency,
+            cost_centre,
+            religion,
+        };
+
+        //println!("empid = {empid}, name = {empname}, country = {country}, currency = {currency}, location= {location} ");
+        println!("{:?}", emp);
+    }
+}

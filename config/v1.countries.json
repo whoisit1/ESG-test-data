@@ -1,0 +1,27 @@
+{
+	"countries": [{
+			"country": "India",
+			"currency": "INR",
+			"location": ["Delhi", "Bangalore", "Vizag", "Hyderabad", "Chennai"],
+			"department": ["Marketing", "Sales", "HR", "Production", "Engineering", "Packing", "Logistics", "Stores", "Customer Service", "R&D", "Procurement"],
+			"cost_centre": ["IN1", "IN2", "IN3", "IN4"],
+			"religion": ["Hinduism", "Christianity", "Islam", "Sikhism", "Buddhism", "Jainism"]
+		},
+		{
+			"country": "US",
+			"currency": "USD",
+			"location": ["Boston", "New York", "Phoenix", "Boise"],
+			"department": ["Marketing", "Sales", "HR", "Production", "Engineering", "Packing", "Logistics", "Stores", "Customer Service", "R&D", "Procurement"],
+			"cost_centre": ["US1", "US2", "US3", "US4", "US5", "US6"],
+			"religion": ["Christianity", "Islam", "Jewish", "Athiest"]
+		},
+		{
+			"country": "Germany",
+			"currency": "EUR",
+			"location": ["Frankfurt", "Bonn", "Berlin"],
+			"department": ["Marketing", "Sales", "HR", "Production", "Engineering", "Packing", "Logistics", "Stores", "Customer Service", "R&D", "Procurement"],
+			"cost_centre": ["GER1", "GER2"],
+			"religion": ["Christianity", "Islam"]
+		}
+	]
+}
