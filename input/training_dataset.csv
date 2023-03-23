@@ -1,0 +1,138 @@
+﻿training_id,category,course_description,training_type,duration,annual_frequency,january,february,march,april,may,june,july,august,september,october,november,december,applicable_for,coverage
+M98463,Mandatory,Business Ethical Conduct Guidelines,E-Learning,2 hours,4,1,,,1,,,1,,,1,,,N1 to EC,100
+M98464,Mandatory,Anti Competitive Behaviour,E-Learning,2 hours,4,,,1,,,1,,,1,,,1,N1 to EC,100
+M98465,Mandatory,Cyber Security and Safe Conduct,E-Learning,2 hours,3,1,,,,1,,,,1,,,,N1 to EC,100
+M98466,Mandatory,H&S Orientation,E-Learning,3 hours,2,,,,,,1,,,,,,1,N1 to EC,100
+M98467,Mandatory,Operational Policy Landscape,E-Learning,4 hours,4,1,,,1,,,1,,,1,,,N1 to EC,100
+M98468,Mandatory,Workday Tool Orientation,E-Learning,1 hour,2,,,,,,1,,,,,,1,N1 to EC,100
+M98469,Mandatory,New Joinee Orientation,Classroom,5 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to EC,100
+M98470,Mandatory,Work Life Balance,E-Learning,3 hours,4,,,1,,,1,,,1,,,1,N1 to EC,100
+M98471,Mandatory,Emotional Intelligence Training,E-Learning,3 hours,6,1,,1,,1,,1,,1,,1,,N1 to EC,100
+M98472,Mandatory,Employee Benefits Program Orientation,E-Learning,2 hours,4,,1,,,1,,,1,,,1,,N1 to EC,100
+M98473,Mandatory,Medical Policy Orientation,E-Learning,2 hours,4,1,,,1,,,1,,,1,,,N1 to EC,100
+M98474,Mandatory,Sustainability Management Framework,E-Learning,2 hours,6,,1,,1,,1,,1,,1,,1,N1 to EC,100
+H67348,H&S,Fire safety in factories and docks,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,92
+H67349,H&S,Role of Employees Participation in Improving Occupational Safety and Health at Workplace,Classroom,2 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,90
+H67350,H&S,Principals of Industrial Hygiene,Classroom,3 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,91
+H67351,H&S,Selection Criteria of  Personal Protective Equipment,Classroom,2 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,90
+H67352,H&S,Participative Management for enhancing Occupational Safety and Health.,Classroom,4 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,95
+H67353,H&S,Management of Chemical Hazards,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,85
+H67354,H&S,Safety in Excavation & Tunneling,Classroom,15 days,6,1,,1,,1,,1,,1,,1,,N1 to M7,80
+H67355,H&S,Workshop on OSH Safety Audit,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,83
+H67356,H&S,Basic course for Inspector of Factories,Classroom,3 weeks,4,1,,,1,,,1,,,1,,,N1 to M7,93
+H67357,H&S,Safety in material Handling & Lifting Operations,Classroom,15 days,6,1,,1,,1,,1,,1,,1,,N1 to M7,88
+H67358,H&S,Physical Hazards and their Control Measures at Workplace,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67359,H&S,Major Accident Hazards Control  in Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67360,H&S,Occupational Health Hazards & their Prevention at Workplace for OSH Professionals.,Classroom,4 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,89
+H67361,H&S,Industrial Safety Management for Accident/Injury Prevention,Classroom,5 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,91
+H67362,H&S,Work Environment Monitoring Techniques,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,93
+H67363,H&S,"Factories Act, 1948",Classroom,1 month,4,,1,,,1,,,1,,,1,,N1 to M7,92
+H67364,H&S,Construction Safety,Classroom,3 months,4,1,,,1,,,1,,,1,,,N1 to M7,92
+H67365,H&S,Hazard Identification and Risk Assessment (HIRA),Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,86
+H67366,H&S,Measurement of Hazardous substances,Classroom,2 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,88
+H67367,H&S,Competent Persons for testing and examination of pressure vessels,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,86
+H67368,H&S,Safety Health and Work Environment Management in Industry,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,77
+H67369,H&S,Hazards in Welding Operation,Classroom,4 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,90
+H67370,H&S,Noise Hazards and  their Control .,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,85
+H67371,H&S,Accident Prevention and Loss Control at Workplace,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,86
+H67372,H&S,"Accident Investigation, Analysis and Reporting",Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,81
+H67373,H&S,Inspector of Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,87
+H67374,H&S,Workshop on Onsite Emergency  Preparedness in  Factories,Classroom,2 weeks,6,1,,1,,1,,1,,1,,1,,N1 to M7,94
+H67375,H&S,Importance of Personal Growth and Group Dynamics in OSH.,Classroom,4 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,87
+H67376,H&S,"Recognition, evaluation and control of Particulate matters in Industries",Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,91
+H67377,H&S,Workshop on Use Care and Maintenance of Personal Protective Equipment in Construction Sector,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,79
+H67378,H&S,Safety Committee Member,Classroom,4 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,96
+H67379,H&S,"Competent persons for lifting machines, lifting tackles and loose gears",Classroom,2 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67380,H&S,Behavior Based Safety – A Proactive Approach for Occupational Safety and Health,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,78
+H67381,H&S,Quality Assurance of Personal Protective Equipment in an Industry,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,85
+H67382,H&S,Process Safety Management,Classroom,3 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67383,H&S,"Regulatory framework of OSH in factories, docks and building and other construction works.",Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67384,H&S,Workshop on Offsite Emergency  Preparedness in Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67385,H&S,Management of Workplace  Hazards and their Control in Industries,Classroom,3 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,92
+H67386,H&S,Workshop on Dispersion Modelling and Impact Assessment,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,96
+H67387,H&S,Evaluation and control of Industrial Illumination,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,83
+H67388,H&S,Principles of Industrial Hygiene,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67389,H&S,HAZOP Studies,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,87
+H67390,H&S,Fundamental of Industrial Hygiene,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,87
+H67391,H&S,Prevention and Control of Major Accidents in Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,83
+H67392,H&S,Safety Engineering and Management,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,84
+H67393,H&S,"Emergency Preparedness, Planning and Response",Classroom,3 weeks,6,1,,1,,1,,1,,1,,1,,N1 to M7,88
+H67394,H&S,Physical Hazards and their Control Measures at Workplace,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,81
+H67395,H&S,"Accident Reporting, Investigation and Analysis at Workplace.",Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,89
+H67396,H&S,Workshop on Occupational Lung Diseases & their prevention at Workplace,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,78
+H67397,H&S,Workshop on Preparedness for Chemical Disasters in Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,79
+H67398,H&S,Management of Major Chemical  Accidents in Factories,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67399,H&S,Industrial Hazards and their Control measures for Accident prevention,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67400,H&S,Occupational Health for OHC Staff,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67401,H&S,Accident Investigation and Reporting System,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67402,H&S,Aspect of Industrial Hygiene and Work Environment Monitoring in Industries,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67403,H&S,Safety in use of Lifting appliances and Lifting Gear in Industries,Classroom,2 hours,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,82
+H67404,H&S,Safety in Handling of Portable Hand and Power Tools ,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,81
+H67405,H&S,Safety Audit,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67406,H&S,Prevention of Accident in Factories and Ports,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,95
+H67407,H&S,Process Safety Management & its elements,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67408,H&S,Safety in the use of Machinery Equipment,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,80
+H67409,H&S,Occupational Safety Hygiene & Health in Industries,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67410,H&S,Safety & Health for supervisor personnel working in hazardous process Industries,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,91
+H67411,H&S,Associated Fellow of Industrial Health,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,77
+H67412,H&S,"Identification, Evaluation and Control of Hazards in Industries.",Classroom,6 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67413,H&S,"Accident Reporting, Investigation And Analysis",Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,78
+H67414,H&S,Safety in Scaffolds,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,87
+H67415,H&S,Safety in Slings & Hoists,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,84
+H67416,H&S,Effective Toolbox Talks,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,91
+H67417,H&S,Transport Safety,Classroom,1 month,4,,1,,,1,,,1,,,1,,N1 to M7,95
+H67418,H&S,Internal Safety Audit,Classroom,3 months,4,1,,,1,,,1,,,1,,,N1 to M7,85
+H67419,H&S,Basic Principal of Accident Investigation and Documentation,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,81
+H67420,H&S,Workshop of Risk Assessment Techniques,Classroom,2 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,90
+H67421,H&S,Hazard Identification and Risk Assessment,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,84
+H67422,H&S,Workshop on Work Environment Monitoring,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,94
+H67423,H&S,Safety Provision during Work at Height,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,95
+H67424,H&S,Management of Workplace Hazards in Industry,Classroom,3 days,12,1,1,1,1,1,1,1,1,1,1,1,1,N1 to M7,79
+S76349,S&M,Certification Course on value selling,Classroom,2 days,4,,,,1,,1,1,,,1,,,N2 to M5,72
+S76350,S&M,Certification Course on Effective Sales and Territory Management,Classroom,2 days,3,,,,,1,,1,1,,,,,N2 to M5,82
+S76351,S&M,Customer Relations and Negotiations,Classroom,2 days,3,,1,1,,,1,,,,,,,N2 to M4,83
+S76352,S&M,Communicating for Success,Classroom,2 days,4,,,1,,1,1,,,1,,,,M1 to M6,82
+S76353,S&M,Effective Planning and Organizing,Classroom,2 days,4,,,,,1,1,,,1,1,,,N1 to M6,87
+S76354,S&M,Leading Teams and Coaching,Classroom,2 days,1,,,,,,,1,,,,,,M4 to M6,72
+S76355,S&M,Concrete Mix Design,Classroom,2 days,2,,,,1,,1,,,,,,,N2 to M4,71
+V87349,Virtual Sales Academy,Value Selling,Online Live,1 day,7,,1,1,,1,,1,1,,1,,1,N2 to M5,77
+V87350,Virtual Sales Academy,Effective Sales and Territory Management,Online Live,1 day,5,,,1,1,,1,,,1,1,,,N2 to M5,84
+V87351,Virtual Sales Academy,Customer Relations and Negotiations,Online Live,1 day,5,,,,1,1,,1,1,1,,,,N2 to M4,80
+V87352,Virtual Sales Academy,Communicating for Success,Online Live,1 day,5,,1,,1,,,1,,1,,1,,M1 to M6,73
+V87353,Virtual Sales Academy,Effective Planning and Organizing,Online Live,1 day,4,,,,,,,1,1,,1,1,,N1 to M6,71
+L56237,Leadership Training,First Time Manager's Toolkit,Classroom,3 days,4,,,1,,1,,1,,,1,,,M1 to M3,85
+L56238,Leadership Training,Leading & Developing High Performance Teams,Classroom,3 days,2,,,,1,,,,1,,,,,M4 to M7,74
+L12653,Logistics,Free time loading of Rakes,E-Learning,8 hours,,,,,,,,,,,,,,N1 to M5,75
+L12654,Logistics,Driver Management Centre (DMC),E-Learning,10 hours,,,,,,,,,,,,,,M2 to M5,77
+L12655,Logistics,In Vehilcle Monitoring System,E-Learning,6 hours,,,,,,,,,,,,,,N2 to M4,89
+L12656,Logistics,Essentials for road freight Fixation,E-Learning,8 hours,,,,,,,,,,,,,,N1 to M6,80
+L12657,Logistics,Logistics Road Strategy,E-Learning,10 hours,,,,,,,,,,,,,,N1 to M6,72
+L12658,Logistics,Logistics Rail Strategy,E-Learning,10 hours,,,,,,,,,,,,,,N2 to M6,82
+L12659,Logistics,Warehouse operations by C&F agents,E-Learning,10 hours,,,,,,,,,,,,,,N1 to M5,82
+L12660,Logistics,Secondary Operations in Logistics,E-Learning,4 hours,,,,,,,,,,,,,,N1 to M5,89
+S76356,S&M,Value Selling,E-Learning,10 hours,,,,,,,,,,,,,,N2 to M5,70
+S76357,S&M,Pricing for Profit,E-Learning,8 hours,,,,,,,,,,,,,,M1 to M6,76
+S76358,S&M,Product Positioning in your market,E-Learning,6 hours,,,,,,,,,,,,,,M1 to M6,82
+S76359,S&M,Problem Solving & Decision Making,E-Learning,4 hours,,,,,,,,,,,,,,N1 to M6,74
+S76360,S&M,Effective Planning & Organuzing,E-Learning,4 hours,,,,,,,,,,,,,,N1 to M6,85
+S76361,S&M,Building Great Teams,E-Learning,4 hours,,,,,,,,,,,,,,M3 to M6,70
+T35482,Technical Training,Certification course on Hydraulic System troubleshooting & maintenance,Classroom,8 days,1,,,1,,,,,,,,,,N1 to M6,83
+T35483,Technical Training,Certification course on Gear Box maintenance,Classroom,3 days,1,,,,1,,,,,,,,,N1 to M6,74
+T35484,Technical Training,Certification Course on Honeywell Process Control system,Classroom,10 days,1,,,,,1,,,,,,,,N1 to M6,89
+T35485,Technical Training,Certification Course on FLS + RA Process Control system,Classroom,10 days,1,,,,,,1,,,,,,,N1 to M6,85
+T35486,Technical Training,Certification course on Physical testing -Basic level,Classroom,10 days,1,,1,,,,,,,,,,,N1 to M6,87
+T35487,Technical Training,Certification course on Physical testing -Advance level,Classroom,10 days,1,,,,1,,,,,,,,,N1 to M6,79
+T35488,Technical Training,Certification Course on QC QA - Module-1: Wet Chemical Analysis -Major and Minor constituents,Classroom,10 days,2,,1,,1,,,,,,,,,N1 to M6,74
+T35489,Technical Training,Certification Course on QC QA - Module-2:Fuel Analysis,Classroom,6 days,1,,1,,,,,,,,,,,N1 to M6,70
+T35490,Technical Training,Lubrication Management,Classroom,3 days,1,,,,,1,,,,,,,,N1 to M6,84
+T35491,Technical Training,Process Engineer Certification Course,Classroom,18 days,2,,1,,,1,,,,,,,,N1 to M6,82
+G08234,Multiskilling,Electrician to Instrument,Classroom,6 days,4,1,,,1,,,1,,,1,,,N1 to M2,88
+G08235,Multiskilling,Fitter to Welder,Classroom,12 days,4,,,1,,,1,,,1,,,1,N1 to M2,89
+G08236,Frontline Supervisor Development Program,LIFE - Launch Impact Further Embed,Classroom,4 months,2,,1,,,,,,1,,,,,N1 to N2,73
+G08237,Mechanical Maintenance,e- learning modules on Loesche Cement Mill 56.3+3 C/S,E-Learning,32 Hrs,,,,,,,,,,,,,,N1 to M3,76
+G08238,Mechanical Maintenance,e- learning modules on Industrial Hydraulic basic level,E-Learning,16 Hrs,,,,,,,,,,,,,,N1 to M3,88
+G08239,Preventive Maintenance,e- learning modules on Maintenance planning & scheduling part-1,E-Learning,2 Hrs,,,,,,,,,,,,,,N1 to M3,88
+G08240,Preventive Maintenance,e- learning modules on Maintenance planning and scheduling part-2,E-Learning,2 Hrs,,,,,,,,,,,,,,N1 to M3,74
+G08241,Process Operation,e- learning modules on Ball Mill Audit,E-Learning,2 Hrs,,,,,,,,,,,,,,N1 to M5,87
+G08242,CPP,e- learning modules on steam turbine,E-Learning,2 Hrs,,,,,,,,,,,,,,N1 to M5,78
+G08243,Cement Manufacturing Process,CECiL 94 modules,E-Learning,188 Hrs,,,,,,,,,,,,,,M1 to EC,76

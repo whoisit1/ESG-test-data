@@ -1,0 +1,202 @@
+extern crate csv;
+extern crate rand;
+
+use serde::{Deserialize, Serialize};
+use std::{
+    //  env,
+    // error::Error,
+    fmt,
+    fs::File,
+    io::Write,
+    //    io::{Read, Write},
+    //    process,
+};
+
+// use rand::distributions::WeightedIndex;
+use rand::prelude::*;
+// use random_string::generate;
+
+// use rand::distributions::Distribution;
+// use statrs::distribution::Normal;
+
+// use chrono::{Datelike, Duration, Utc};
+
+#[derive(Debug, serde::Deserialize)]
+struct Employee {
+    empid: String,
+    // emp_type: String,
+    // dob: String,
+    // age: u8,
+    // doj: String,
+    // dos: Option<String>,
+    // reason_for_sep: Option<String>,
+    // gender: String,
+    // marital_status: String,
+    band: String,
+    // mgmt_level: String,
+    // compensation: f32,
+    // country: String,
+    // location: String,
+    // department: String,
+    // cost_centre: String,
+    // religion: String,
+    // ethnicity: String,
+    // minority: Option<String>,
+}
+
+#[derive(Debug, serde::Deserialize)]
+struct TrainingDS {
+    training_id: String,
+    category: String,
+    course_description: String,
+    training_type: String,
+    duration: String,
+    // annual_frequency: String,
+    // january: Option<u8>,
+    // february: Option<u8>,
+    // march: Option<u8>,
+    // april: Option<u8>,
+    // may: Option<u8>,
+    // june: Option<u8>,
+    // july: Option<u8>,
+    // august: Option<u8>,
+    // september: Option<u8>,
+    // october: Option<u8>,
+    // november: Option<u8>,
+    // december: Option<u8>,
+    applicable_for: String,
+    coverage: u8,
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct TrainingDump {
+    empid: String,
+    band: String,
+    training_id: String,
+    category: String,
+    course_description: String,
+    training_type: String,
+    duration: String,
+    date_attended: String,
+}
+
+impl fmt::Display for TrainingDump {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "{}, {}, {}, {}, {}, {}, {}, {}",
+            self.empid,
+            self.band,
+            self.training_id,
+            self.category,
+            self.course_description,
+            self.training_type,
+            self.duration,
+            self.date_attended
+        )
+    }
+}
+
+fn main() {
+    // let mut counter = 0;
+
+    let trng_file = File::open("../input/training_dataset.csv").unwrap();
+    let mut training_ds: Vec<TrainingDS> = Vec::new();
+    //trng_file.read_to_end(&mut trainingDS)?;
+
+    let mut trng_rdr = csv::Reader::from_reader(trng_file);
+    //'outer:
+    for record in trng_rdr.deserialize() {
+        let trng_rec: TrainingDS = record.unwrap();
+        training_ds.push(trng_rec);
+        // println!("{:?}", &trng_rec);
+        // counter += 1;
+        // if counter == 30 {
+        //     //counter = 0;
+        //     break 'outer; // not really required; but placed it here as a reminder
+        // }
+    }
+    let num_trainings = &training_ds.len();
+
+    let mut outfile = File::create("../output/trng.csv").unwrap();
+
+    println!("No. of trainings = {}", num_trainings);
+    println!("---------------------------------------------");
+
+    let emp_file = File::open("../input/employee_DB.csv").unwrap();
+    let mut emp_rdr = csv::Reader::from_reader(emp_file);
+    let mut trng_count = 0;
+    for record in emp_rdr.deserialize() {
+        let employee: Employee = record.unwrap();
+        // println!("{:?}", employee);
+        trng_count = 0;
+        println!(
+            "********* For empid: {} ***************\n\n",
+            &employee.empid
+        );
+        let mut outrec = TrainingDump {
+            ..Default::default()
+        };
+
+        outrec.empid = employee.empid;
+        outrec.band = employee.band;
+
+        for trng in training_ds.iter() {
+            // println!(
+            //     "Training id is: {}, Category is: {}",
+            //     trng.training_id.to_string(),
+            //     trng.category.to_string()
+            // );
+
+            match trng.category.as_str() {
+                "Mandatory" => {
+                    let n: f64 = (&mut rand::thread_rng()).gen::<f64>() * 100.0;
+                    // println!("n is {}", n as u8);
+                    match n as u8 {
+                        0..=96 => {
+                            // 96% attendance for mandatory trainings
+                            outrec.training_id = trng.training_id.to_string();
+                            outrec.category = trng.category.to_string();
+                            outrec.course_description = trng.course_description.to_string();
+                            outrec.training_type = trng.training_type.to_string();
+                            outrec.duration = trng.duration.to_string();
+                            outrec.date_attended = "to be filled".to_string();
+                            trng_count += 1;
+                        }
+                        _ => continue,
+                    }
+                }
+                _ => {
+                    let n: f64 = (&mut rand::thread_rng()).gen::<f64>() * 100.0;
+                    let bound = trng.coverage;
+                    if n as u8 <= bound {
+                        outrec.training_id = trng.training_id.to_string();
+                        outrec.category = trng.category.to_string();
+                        outrec.course_description = trng.course_description.to_string();
+                        outrec.training_type = trng.training_type.to_string();
+                        outrec.duration = trng.duration.to_string();
+                        outrec.date_attended = "to be filled".to_string();
+                        trng_count += 1;
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
+            // let out1 = format!("{}", outrec);
+            // println!("{}", out1);
+
+            let outrec1 = format!("{}\n", outrec);
+            outfile
+                .write_all(outrec1.as_bytes())
+                .expect("Could not write output");
+        }
+
+        println!("\n\nTotal number of trainings = {}\n\n", trng_count);
+    }
+
+    // println!("---------------------------------------------");
+    // for i in trainingDS.iter() {
+    //     println!("{:#?}", i);
+    // }
+}

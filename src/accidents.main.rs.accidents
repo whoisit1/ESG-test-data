@@ -1,0 +1,114 @@
+extern crate csv;
+extern crate rand;
+
+use serde::{Deserialize, Serialize};
+use std::{fmt, fs::File, io::Write};
+
+use rand::distributions::WeightedIndex;
+use rand::prelude::*;
+// use chrono::{Datelike, Duration, Utc};
+
+#[derive(Debug, serde::Deserialize)]
+struct Employee {
+    empid: String,
+    country: String,
+    cost_centre: String,
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct AccidentsDump {
+    empid: String,
+    injury_type: String,
+    injury_loc: String,
+    asset_involved: String,
+    business_unit: String,
+    cost_centre: String,
+    // process_or_activity: String,
+}
+
+impl fmt::Display for AccidentsDump {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "{},{},{},{},{},{}", //, {}",
+            self.empid,
+            self.injury_type,
+            self.injury_loc,
+            self.asset_involved,
+            self.business_unit,
+            self.cost_centre,
+            // self.process_or_activity,
+        )
+    }
+}
+
+fn main() {
+    let inj_type = [
+        "Fatality",
+        "First-aid injury",
+        "Lost-time injury",
+        "Medical injury",
+        "Modified work-duty injury",
+        "No treatment (near miss)",
+    ];
+    let inj_type_wtg = [4, 15, 19, 15, 10, 37];
+
+    let asset_involved = [
+        "Ops vehicle collision",
+        "Building structure",
+        "Building fixture fall",
+        "Equipment component",
+        "Vehicle to building collision",
+        "No asset involved",
+    ];
+    let asset_involved_wtg = [10, 10, 10, 10, 10, 50];
+
+    let injury_loc = ["onsite", "offsite"];
+    let injury_loc_wtg = [80, 20];
+
+    let mut outfile = File::create("../output/accidents.csv").unwrap();
+
+    let emp_file = File::open("../input/employee_DB.csv").unwrap();
+    // let emp_file = File::open("../input/3_emps.csv").unwrap();
+    let mut emp_rdr = csv::Reader::from_reader(emp_file);
+
+    for record in emp_rdr.deserialize() {
+        // probability of an incident occuring on a given day is 35%
+        // => there should be ~120 accidents in the year
+        // with 1000 emps on the rolls,
+        // this implies a probability of 120/1000 = 0.12 in an employee-iteration loop
+
+        let n = (&mut rand::thread_rng()).gen::<f64>() * 100.0;
+        match n as u8 {
+            0..=88 => {
+                continue;
+            }
+            _ => {
+                // there's an accident. Now, build an accident record.
+                let employee: Employee = record.unwrap();
+                let mut outrec = AccidentsDump {
+                    ..Default::default()
+                };
+
+                outrec.empid = employee.empid;
+                outrec.business_unit = employee.country;
+                outrec.cost_centre = employee.cost_centre;
+
+                let dist = WeightedIndex::new(inj_type_wtg).unwrap();
+                outrec.injury_type = inj_type[dist.sample(&mut rand::thread_rng())].to_string();
+
+                let dist = WeightedIndex::new(asset_involved_wtg).unwrap();
+                outrec.asset_involved =
+                    asset_involved[dist.sample(&mut rand::thread_rng())].to_string();
+
+                let dist = WeightedIndex::new(injury_loc_wtg).unwrap();
+                outrec.injury_loc = injury_loc[dist.sample(&mut rand::thread_rng())].to_string();
+
+                let outrec1 = format!("{}\n", outrec);
+                outfile
+                    .write_all(outrec1.as_bytes())
+                    .expect("Could not write output");
+            }
+        }
+    }
+}

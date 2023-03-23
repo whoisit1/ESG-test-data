@@ -1,0 +1,228 @@
+extern crate csv;
+extern crate rand;
+
+use serde::{Deserialize, Serialize};
+use std::{fmt, fs::File, io::Write};
+
+use rand::prelude::*;
+// use chrono::{Datelike, Duration, Utc};
+
+#[derive(Debug, serde::Deserialize)]
+struct Employee {
+    empid: String,
+    // emp_type: String,
+    // dob: String,
+    // age: u8,
+    // doj: String,
+    // dos: Option<String>,
+    // reason_for_sep: Option<String>,
+    // gender: String,
+    // marital_status: String,
+    band: String,
+    // mgmt_level: String,
+    // compensation: f32,
+    // country: String,
+    // location: String,
+    // department: String,
+    // cost_centre: String,
+    // religion: String,
+    // ethnicity: String,
+    // minority: Option<String>,
+}
+
+#[derive(Debug, serde::Deserialize)]
+struct TrainingDS {
+    training_id: String,
+    category: String,
+    course_description: String,
+    training_type: String,
+    duration: String,
+    // annual_frequency: String,
+    // january: Option<u8>,
+    // february: Option<u8>,
+    // march: Option<u8>,
+    // april: Option<u8>,
+    // may: Option<u8>,
+    // june: Option<u8>,
+    // july: Option<u8>,
+    // august: Option<u8>,
+    // september: Option<u8>,
+    // october: Option<u8>,
+    // november: Option<u8>,
+    // december: Option<u8>,
+    applicable_for: String,
+    coverage: u8,
+}
+
+#[derive(Default, Debug, Serialize, Deserialize)]
+struct TrainingDump {
+    empid: String,
+    band: String,
+    training_id: String,
+    category: String,
+    course_description: String,
+    training_type: String,
+    duration: u32,
+    //    date_attended: String,
+}
+
+impl fmt::Display for TrainingDump {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            f,
+            "{},{},{},{},\"{}\",{},{}", //, {}",
+            self.empid,
+            self.band,
+            self.training_id,
+            self.category,
+            self.course_description,
+            self.training_type,
+            self.duration,
+            //            self.date_attended
+        )
+    }
+}
+
+fn main() {
+    let trng_file = File::open("../input/training_dataset.csv").unwrap();
+    let mut training_ds: Vec<TrainingDS> = Vec::new();
+
+    let mut trng_rdr = csv::Reader::from_reader(trng_file);
+    for record in trng_rdr.deserialize() {
+        let trng_rec: TrainingDS = record.unwrap();
+        training_ds.push(trng_rec);
+    }
+    let num_trainings = &training_ds.len();
+    let band_array = [
+        "", "N1", "N2", "M1", "M2", "M3", "M4", "M5", "M6", "M7", "EC",
+    ];
+
+    let mut outfile = File::create("../output/trng.csv").unwrap();
+
+    // println!("No. of trainings = {}", num_trainings);
+    // println!("---------------------------------------------");
+
+    let emp_file = File::open("../input/employee_DB.csv").unwrap();
+    // let emp_file = File::open("../input/3_emps.csv").unwrap();
+    let mut emp_rdr = csv::Reader::from_reader(emp_file);
+    let mut trng_count;
+    for record in emp_rdr.deserialize() {
+        let employee: Employee = record.unwrap();
+        trng_count = 0;
+        // println!("********* For empid: {} ***************", &employee.empid);
+        let mut outrec = TrainingDump {
+            ..Default::default()
+        };
+
+        outrec.empid = employee.empid;
+        outrec.band = employee.band;
+
+        for trng in training_ds.iter() {
+            match trng.category.as_str() {
+                "Mandatory" => {
+                    let n: f64 = (&mut rand::thread_rng()).gen::<f64>() * 100.0;
+                    match n as u8 {
+                        0..=96 => {
+                            // 96% attendance for mandatory trainings
+                            outrec.training_id = trng.training_id.to_string();
+                            outrec.category = trng.category.to_string();
+                            outrec.course_description = trng.course_description.to_string();
+                            outrec.training_type = trng.training_type.to_string();
+                            let duration = trng.duration.to_string();
+                            outrec.duration = get_trng_hours(duration);
+                            // outrec.date_attended = "to be filled".to_string();
+                            trng_count += 1;
+                        }
+                        _ => continue,
+                    }
+                }
+                _ => {
+                    let emp_band = &outrec.band;
+                    let emp_band_index = band_array.iter().position(|&x| x == emp_band).unwrap();
+                    let trng_for_band_range = &trng.applicable_for;
+
+                    let bounds: Vec<&str> = trng_for_band_range.split(' ').collect();
+                    let lower_bound = bounds[0];
+                    let lower_bound_index =
+                        band_array.iter().position(|&x| x == lower_bound).unwrap();
+
+                    let upper_bound = bounds[2];
+                    let upper_bound_index =
+                        band_array.iter().position(|&x| x == upper_bound).unwrap();
+
+                    if lower_bound_index <= emp_band_index && emp_band_index <= upper_bound_index {
+                        let n: f64 = (&mut rand::thread_rng()).gen::<f64>() * 100.0;
+                        let bound = trng.coverage;
+                        if n as u8 <= bound {
+                            outrec.training_id = trng.training_id.to_string();
+                            outrec.category = trng.category.to_string();
+                            outrec.course_description = trng.course_description.to_string();
+                            outrec.training_type = trng.training_type.to_string();
+                            let duration = trng.duration.to_string();
+                            outrec.duration = get_trng_hours(duration);
+                            // outrec.date_attended = "to be filled".to_string();
+                            trng_count += 1;
+                        } else {
+                            continue;
+                        }
+                    } else {
+                        continue;
+                    }
+                }
+            }
+
+            let outrec1 = format!("{}\n", outrec);
+            outfile
+                .write_all(outrec1.as_bytes())
+                .expect("Could not write output");
+        }
+        // println!("Total number of trainings for this employee = {}", trng_count);
+    }
+}
+
+fn get_trng_hours(duration: String) -> u32 {
+    if duration.contains("hour") {
+        duration
+            .split_whitespace()
+            .next()
+            .unwrap()
+            .parse::<u32>()
+            .unwrap()
+    } else if duration.contains("day") {
+        duration
+            .split_whitespace()
+            .next()
+            .unwrap()
+            .parse::<u32>()
+            .unwrap()
+            * 8
+    } else if duration.contains("week") {
+        duration
+            .split_whitespace()
+            .next()
+            .unwrap()
+            .parse::<u32>()
+            .unwrap()
+            * 5
+            * 8
+    } else if duration.contains("month") {
+        duration
+            .split_whitespace()
+            .next()
+            .unwrap()
+            .parse::<u32>()
+            .unwrap()
+            * 22
+            * 8
+    } else if duration.contains("Hrs") {
+        duration
+            .split_whitespace()
+            .next()
+            .unwrap()
+            .parse::<u32>()
+            .unwrap()
+    } else {
+        99
+        // default duration for invalid data
+    }
+}

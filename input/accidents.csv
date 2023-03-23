@@ -1,0 +1,97 @@
+empid,injury_type,location,asset_involved,business_unit,cost_centre
+SRDIHA27,First-aid injury,offsite,No asset involved,United Kingdom,UK2
+C965P7WA,Medical injury,onsite,Building fixture fall,Italy,IT2
+BSZUNXPW,First-aid injury,offsite,Building structure,Belgium,BL3
+0JW3HAPW,Medical injury,onsite,Building structure,China,CN1
+NZ9ILL4D,No treatment (near miss),onsite,Ops vehicle collision,Italy,IT2
+HHWKBDTZ,No treatment (near miss),offsite,Ops vehicle collision,Italy,IT3
+7EA3KOHH,No treatment (near miss),onsite,No asset involved,United States,US2
+6MYRZJK1,First-aid injury,onsite,Ops vehicle collision,Denmark,DM2
+0VC8BACU,No treatment (near miss),onsite,Ops vehicle collision,India,IN4
+L3EKJRWD,Medical injury,offsite,No asset involved,Denmark,DM2
+I3KMUG07,No treatment (near miss),onsite,No asset involved,Belgium,BL2
+I5HC59OC,No treatment (near miss),onsite,No asset involved,China,CN6
+BMJT7W29,Medical injury,onsite,No asset involved,Belgium,BL1
+O7W17NY5,No treatment (near miss),offsite,Building fixture fall,Indonesia,IA1
+PVH0LC8O,No treatment (near miss),onsite,Vehicle to building collision,Belgium,BL1
+F47E98AR,Lost-time injury,onsite,Equipment component,China,CN5
+IEG2FFNG,Modified work-duty injury,offsite,Vehicle to building collision,United Kingdom,UK3
+14PVDOH7,First-aid injury,onsite,No asset involved,United States,US1
+RX5LRX93,Modified work-duty injury,offsite,No asset involved,China,CN6
+AMO85X1D,No treatment (near miss),onsite,Building fixture fall,Netherlands,NL1
+CUEL0UST,First-aid injury,onsite,Building fixture fall,Denmark,DM1
+9D9HEPZU,Lost-time injury,onsite,No asset involved,India,IN1
+0F9783L0,Lost-time injury,offsite,No asset involved,Indonesia,IA3
+XTOOPXCS,First-aid injury,offsite,Ops vehicle collision,Belgium,BL1
+42ZV5YKG,No treatment (near miss),onsite,No asset involved,United States,US2
+VHDZC01X,First-aid injury,onsite,Ops vehicle collision,India,IN2
+OK1KEMLU,Fatality,onsite,Equipment component,Denmark,DM2
+7SBOUY9R,No treatment (near miss),onsite,Equipment component,Italy,IT1
+U7CXRK4X,Lost-time injury,offsite,Building fixture fall,Netherlands,NL1
+YGXBXCDF,Lost-time injury,onsite,No asset involved,United States,US6
+XIN12S4T,Lost-time injury,onsite,Equipment component,Belgium,BL2
+QOKOLCN8,No treatment (near miss),onsite,Building fixture fall,India,IN1
+JXAQCYBW,Medical injury,onsite,No asset involved,Indonesia,IA2
+CA9CMVMV,Medical injury,onsite,No asset involved,China,CN1
+NPYEZ9HU,Lost-time injury,onsite,Equipment component,China,CN3
+GXQC20AR,Lost-time injury,onsite,Vehicle to building collision,Netherlands,NL1
+7QQQTKT4,Lost-time injury,onsite,Building fixture fall,Indonesia,IA2
+OEU0183C,Lost-time injury,onsite,Vehicle to building collision,Belgium,BL2
+0U3NPNGH,No treatment (near miss),onsite,No asset involved,Netherlands,NL4
+AZRLSQEQ,No treatment (near miss),onsite,No asset involved,Indonesia,IA1
+4R82YHWV,No treatment (near miss),onsite,Building structure,Indonesia,IA3
+BV2YRPKL,No treatment (near miss),onsite,Ops vehicle collision,United States,US5
+TKY86SL5,Medical injury,onsite,Ops vehicle collision,India,IN4
+6Q0884IS,No treatment (near miss),onsite,No asset involved,United States,US4
+2VTG8T0F,No treatment (near miss),onsite,Equipment component,Denmark,DM2
+LRSI1XVB,No treatment (near miss),onsite,No asset involved,Belgium,BL3
+AX79IW59,No treatment (near miss),offsite,Building structure,United States,US6
+46TJFPYR,No treatment (near miss),offsite,Building fixture fall,Belgium,BL3
+UZW1224M,Medical injury,onsite,No asset involved,Denmark,DM2
+Q8MC439I,First-aid injury,onsite,Vehicle to building collision,Denmark,DM2
+8LO4GRLZ,Medical injury,onsite,Ops vehicle collision,India,IN1
+4T4T5THF,No treatment (near miss),offsite,Building fixture fall,China,CN1
+1VDPS7XN,Modified work-duty injury,onsite,Building structure,Indonesia,IA3
+XJTMR80X,Lost-time injury,onsite,Building structure,United Kingdom,UK2
+4BZEVDFT,Modified work-duty injury,onsite,No asset involved,United Kingdom,UK3
+1VU5B0H8,No treatment (near miss),onsite,Ops vehicle collision,India,IN2
+C6MYZ0AE,Medical injury,onsite,Equipment component,United States,US1
+PO66BXEZ,No treatment (near miss),onsite,No asset involved,China,CN3
+6VF80O2F,No treatment (near miss),onsite,Building fixture fall,Belgium,BL2
+QMM351FD,Medical injury,onsite,No asset involved,Indonesia,IA1
+8K1ZLXJ4,No treatment (near miss),onsite,No asset involved,United Kingdom,UK1
+KIHVQS7S,No treatment (near miss),onsite,Ops vehicle collision,Indonesia,IA3
+DEIHCEDP,No treatment (near miss),onsite,Building fixture fall,Indonesia,IA1
+1LTRJC9A,First-aid injury,onsite,No asset involved,China,CN6
+8KOK7YIK,No treatment (near miss),onsite,Equipment component,Belgium,BL3
+1A62YZKQ,Fatality,onsite,No asset involved,United Kingdom,UK3
+LYE9XYZB,Lost-time injury,offsite,Equipment component,Italy,IT2
+796B4HXP,No treatment (near miss),onsite,No asset involved,United States,US4
+6RAKANJZ,Lost-time injury,onsite,No asset involved,Belgium,BL2
+1ESRDOJR,Medical injury,onsite,No asset involved,Indonesia,IA2
+9QPWLWVF,No treatment (near miss),onsite,No asset involved,United States,US6
+EWGQIXAA,Lost-time injury,offsite,Building structure,India,IN3
+S1OPAFXI,Modified work-duty injury,onsite,No asset involved,China,CN4
+4CYAUD7G,No treatment (near miss),onsite,No asset involved,Belgium,BL2
+1IY4W0CU,No treatment (near miss),onsite,Vehicle to building collision,Denmark,DM1
+I5BEJGP4,Lost-time injury,onsite,Equipment component,Denmark,DM1
+1Z7HVISS,First-aid injury,onsite,No asset involved,China,CN2
+DIBMELPG,No treatment (near miss),onsite,No asset involved,China,CN1
+PJ1A0FV9,Modified work-duty injury,onsite,No asset involved,Italy,IT2
+AN6NVSM0,No treatment (near miss),onsite,No asset involved,Netherlands,NL3
+4FBSM1WR,No treatment (near miss),onsite,No asset involved,United States,US4
+GXXHJK3D,No treatment (near miss),onsite,Equipment component,China,CN2
+V0PRCR7M,Lost-time injury,offsite,No asset involved,United Kingdom,UK3
+PAI4M6MU,Lost-time injury,onsite,Equipment component,China,CN1
+U10T6LR7,Fatality,onsite,No asset involved,United Kingdom,UK1
+WSCCKIKS,No treatment (near miss),onsite,Vehicle to building collision,United Kingdom,UK4
+BH4BCIPH,Medical injury,onsite,No asset involved,Italy,IT1
+5UZU2GJ2,Medical injury,onsite,No asset involved,Belgium,BL1
+369TN5QI,No treatment (near miss),onsite,Building fixture fall,United States,US6
+NSRAP46C,No treatment (near miss),onsite,Vehicle to building collision,China,CN5
+O2XN5MB1,Modified work-duty injury,offsite,Ops vehicle collision,Belgium,BL1
+0TO9MQ05,Medical injury,offsite,Building fixture fall,United States,US2
+XW5JIDKV,No treatment (near miss),offsite,Building structure,Indonesia,IA3
+NC2KIV3F,Medical injury,onsite,No asset involved,India,IN2
+KOVYDMSA,No treatment (near miss),offsite,Ops vehicle collision,Netherlands,NL3
+VV9WO1GL,Lost-time injury,onsite,Vehicle to building collision,Belgium,BL1
